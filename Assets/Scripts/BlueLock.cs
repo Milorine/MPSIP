@@ -7,10 +7,11 @@ public class BlueLock : MonoBehaviour
 {
     public Rigidbody ballRigidbody;
     public Transform legTarget;
-    public float kickThreshold = 1.0f; // Adjust based on sensitivity
+    public float kickThreshold = 0.5f; // Adjust based on sensitivity
     public float kickForce = 10.0f;
     private Vector3 previousPosition;
 
+    public Renderer ballRenderer;
     void Start()
     {
         if (legTarget != null)
@@ -28,15 +29,23 @@ public class BlueLock : MonoBehaviour
 
             if (movement.magnitude > kickThreshold)
             {
-                KickBall(movement);
+                KickBall();
             }
 
             previousPosition = currentPosition;
         }
     }
 
-    void KickBall(Vector3 direction)
+    void KickBall()
     {
-        ballRigidbody.AddForce(direction.normalized * kickForce, ForceMode.Impulse);
+        ballRigidbody.AddForce(Vector3.up * kickForce, ForceMode.Impulse);
+        ballRenderer.material.color = Color.blue;
+        StartCoroutine(ChangeColorBack());
+    }
+
+    IEnumerator ChangeColorBack()
+    {
+        yield return new WaitForSeconds(2);
+        ballRenderer.material.color = Color.white;
     }
 }
