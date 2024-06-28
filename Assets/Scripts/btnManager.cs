@@ -10,4 +10,10 @@ public class btnManager : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+
+    // Back to start page (Kitchen)
+    public void buttonBack()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
 }
