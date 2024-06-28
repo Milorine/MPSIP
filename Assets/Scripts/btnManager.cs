@@ -8,7 +8,8 @@ public class btnManager : MonoBehaviour
     // startup enter button
     public void buttonEnter()
     {
-        SceneManager.LoadScene("SampleScene");
+        //SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Ball");
     }
 
     // Back to start page (Kitchen)
