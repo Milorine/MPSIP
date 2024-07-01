@@ -9,7 +9,7 @@ public class btnManager : MonoBehaviour
     public void buttonEnter()
     {
         //SceneManager.LoadScene("SampleScene");
-        SceneManager.LoadScene("Ball");
+        SceneManager.LoadScene("HorseRace");
     }
 
     // Back to start page (Kitchen)

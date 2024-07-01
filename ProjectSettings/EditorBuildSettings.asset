@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ball.unity
     guid: 97edd27531dd96f4b87922803d569abf
+  - enabled: 1
+    path: Assets/Scenes/HorseRace.unity
+    guid: dfe6c4a106e71994a89bdcde3185be8f
   m_configObjects: {}
