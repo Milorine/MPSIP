@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Global Resource
   - Ball
+  - Capteh
   layers:
   - Default
   - TransparentFX
