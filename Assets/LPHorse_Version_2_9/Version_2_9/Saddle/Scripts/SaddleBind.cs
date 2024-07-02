@@ -1,35 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class SaddleBind : MonoBehaviour
-{
-    [SerializeField] GameObject saddle = null;
-    Transform chestBone;
-    Transform saddleBone;
-
-    // Start is called before the first frame update
-    void Awake()
-    {
-        Transform[] childTransforms = gameObject.GetComponentsInChildren<Transform>();
-        foreach (Transform t in childTransforms)
-        {
-            if (t.name == "Chest_Pull")
-            {
-                chestBone = t;
-            }
-            if (t.name == "Saddle_MCH_Back_end")
-            {
-                saddleBone = t;
-            }
-        }
-    }
-
-    // Update is called once per frame
-    void LateUpdate()
-    {
-        saddle.transform.position =  chestBone.position;
-        saddle.transform.LookAt(saddleBone.position);
-    }
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5bc8850bc3b469ffe7022907c6c63587fc0ffbb650efdd4a1fc5f54b783b8c1d
+size 893
